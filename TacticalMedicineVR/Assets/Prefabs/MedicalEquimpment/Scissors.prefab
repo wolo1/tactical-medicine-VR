@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07e3f379630d5b4fb490f6144215637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: Scissors
 --- !u!1 &7061098218970263111
 GameObject:
   m_ObjectHideFlags: 0
