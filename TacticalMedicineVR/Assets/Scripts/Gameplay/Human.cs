@@ -9,31 +9,21 @@ public class Human : MonoBehaviour
     public GameObject maleClothes;
     private bool clothesRemoved = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("MedicalEquipment"))
         {
-            var equipmentType = collision.gameObject.GetComponent<MedicalEquipmentType>();
-            if (equipmentType != null)
+            var medicalEquipment = collision.gameObject.GetComponent<MedicalEquipment>();
+            if (medicalEquipment != null)
             {
-                if (equipmentType.type == "Scissors")
+                if (medicalEquipment.type == "Scissors")
                 {
                     maleClothes.GetComponent<Renderer>().material.SetTexture("_BaseMap", maleJeansCut);
+                    medicalEquipment.audioSource.Play();
                     clothesRemoved = true;
                 }
-                else if (equipmentType.type == "Tourniquet" && clothesRemoved)
+                else if (medicalEquipment.type == "Tourniquet" && clothesRemoved)
                 {
                     maleClothes.GetComponent<Renderer>().material.SetTexture("_BaseMap", maleJeansTourniquet);
                 }
