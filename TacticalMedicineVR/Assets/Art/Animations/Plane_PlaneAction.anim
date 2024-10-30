@@ -45,7 +45,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0, y: 0, z: 0}
+        value: {x: 0.158, y: 0, z: -0.465}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -71,7 +71,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 100, y: 100, z: 100}
+        value: {x: 10, y: 10, z: 10}
         inSlope: {x: 2.8416138, y: 2.8416138, z: 0}
         outSlope: {x: 2.8416138, y: 2.8416138, z: 0}
         tangentMode: 0
@@ -111,7 +111,7 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
-      attribute: 3
+      attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
@@ -120,7 +120,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 0
-      attribute: 1
+      attribute: 3
       script: {fileID: 0}
       typeID: 4
       customType: 0
@@ -164,7 +164,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0
+        value: 0.158
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -224,7 +224,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: -0.465
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -254,7 +254,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 100
+        value: 10
         inSlope: 2.8416138
         outSlope: 2.8416138
         tangentMode: 0
@@ -293,7 +293,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 100
+        value: 10
         inSlope: 2.8416138
         outSlope: 2.8416138
         tangentMode: 0
@@ -332,7 +332,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 100
+        value: 10
         inSlope: 0
         outSlope: 0
         tangentMode: 0

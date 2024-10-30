@@ -174,9 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d983bccff1e7b0446b6f501fd3cf479d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maleJeansCut: {fileID: 2800000, guid: 7024a8d288e70ad45968b46aebe4c825, type: 3}
-  maleJeansTourniquet: {fileID: 2800000, guid: 9d0cf7096da7d1f448dafd7d24c3a664, type: 3}
-  maleClothes: {fileID: 5919622818045590363}
+  clothesCut: {fileID: 2800000, guid: 7024a8d288e70ad45968b46aebe4c825, type: 3}
+  medicineApplied: {fileID: 2800000, guid: 9d0cf7096da7d1f448dafd7d24c3a664, type: 3}
+  clothes: {fileID: 5919622818045590363}
 --- !u!65 &9147811070248291206
 BoxCollider:
   m_ObjectHideFlags: 0
