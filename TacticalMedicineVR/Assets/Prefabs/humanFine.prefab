@@ -126,7 +126,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.081, y: -0.034, z: 0.009}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.73483, y: 0.73483, z: 0.73483}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5535869746196124186}
@@ -177,6 +177,7 @@ MonoBehaviour:
   clothesCut: {fileID: 2800000, guid: 7024a8d288e70ad45968b46aebe4c825, type: 3}
   medicineApplied: {fileID: 2800000, guid: 9d0cf7096da7d1f448dafd7d24c3a664, type: 3}
   clothes: {fileID: 5919622818045590363}
+  bleeding: {fileID: 0}
 --- !u!65 &9147811070248291206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -196,8 +197,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.26, y: 0.35, z: 0.66}
-  m_Center: {x: 0.09, y: 0.07, z: 0}
+  m_Size: {x: 0.26, y: 0.2, z: 0.47}
+  m_Center: {x: 0.09, y: 0.22, z: 0.24}
 --- !u!54 &9038079637760049798
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -221,7 +222,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

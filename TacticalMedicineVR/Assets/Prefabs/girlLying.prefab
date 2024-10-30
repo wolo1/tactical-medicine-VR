@@ -73,6 +73,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2733881492290233929}
   - component: {fileID: 9185667273769204476}
+  - component: {fileID: 4733512416667864537}
+  - component: {fileID: 3098146429846644803}
   m_Layer: 0
   m_Name: girlLying
   m_TagString: Untagged
@@ -88,7 +90,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549347645852188611}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.66160834, y: 0.07571224, z: 0.06742159, w: -0.7429646}
+  m_LocalRotation: {x: 0.6616087, y: 0.075709775, z: 0.06741941, w: -0.7429648}
   m_LocalPosition: {x: 1.367, y: -0.064, z: 0.539}
   m_LocalScale: {x: 1.1237, y: 1.1237, z: 1.1237}
   m_ConstrainProportionsScale: 0
@@ -116,9 +118,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d983bccff1e7b0446b6f501fd3cf479d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clothesCut: {fileID: 2800000, guid: 1f1d6965926f6c442b5c7c69a37e105b, type: 3}
-  medicineApplied: {fileID: 0}
-  maleClothes: {fileID: 7005486594998750730}
+  clothesCut: {fileID: 2800000, guid: 936f39b2b5bf8a340a09908c1389a2cd, type: 3}
+  medicineApplied: {fileID: 2800000, guid: 8925cb5a8291c184d8ebb29b25b46353, type: 3}
+  clothes: {fileID: 7005486594998750730}
+  bleeding: {fileID: 0}
+--- !u!65 &4733512416667864537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549347645852188611}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.21300744, y: 0.20270103, z: 0.17745109}
+  m_Center: {x: -0.0067118676, y: 0.79803705, z: -0.030000031}
+--- !u!54 &3098146429846644803
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549347645852188611}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &863699802773655289
 GameObject:
   m_ObjectHideFlags: 0
