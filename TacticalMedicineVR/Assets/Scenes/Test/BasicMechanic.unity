@@ -16213,6 +16213,95 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1939245007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1560177923
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.013714141
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.013714141
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.013714141
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.242
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1803
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.598
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92010385
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.39167452
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -46.118
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6287ee5cf3230e14689afbc3b4a8507a,
+        type: 3}
+      propertyPath: m_Name
+      value: Battle grounds pain reliever (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 626947107699478813, guid: 6287ee5cf3230e14689afbc3b4a8507a, type: 3}
+    - {fileID: -8376432282134953796, guid: 6287ee5cf3230e14689afbc3b4a8507a, type: 3}
+    - {fileID: 6767366737685482871, guid: 6287ee5cf3230e14689afbc3b4a8507a, type: 3}
+    - {fileID: 2463706537061040287, guid: 6287ee5cf3230e14689afbc3b4a8507a, type: 3}
+    - {fileID: -8374872256220050265, guid: 6287ee5cf3230e14689afbc3b4a8507a, type: 3}
+    - {fileID: 1699813623367995908, guid: 6287ee5cf3230e14689afbc3b4a8507a, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6287ee5cf3230e14689afbc3b4a8507a, type: 3}
 --- !u!1 &1563758712
 GameObject:
   m_ObjectHideFlags: 0
@@ -23242,3 +23331,4 @@ SceneRoots:
   - {fileID: 1179860931}
   - {fileID: 6759789746942567739}
   - {fileID: 6829402918529377924}
+  - {fileID: 1560177923}
