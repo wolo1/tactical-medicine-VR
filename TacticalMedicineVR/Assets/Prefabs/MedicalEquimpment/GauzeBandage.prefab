@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8935831326355974678}
   - component: {fileID: 5527682839919476769}
   - component: {fileID: 7464788506155325095}
+  - component: {fileID: 8865022068521137234}
+  - component: {fileID: 1235405520511284202}
   m_Layer: 0
   m_Name: GauzeBandage
   m_TagString: Untagged
@@ -26,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4406695326699825639}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.99615604, y: -0, z: -0, w: 0.08759671}
+  m_LocalRotation: {x: 0.9961558, y: 0, z: 0, w: 0.08759917}
   m_LocalPosition: {x: -0.508, y: 0.167, z: 0.014}
-  m_LocalScale: {x: 0.3937, y: 0.3937, z: 0.3937}
+  m_LocalScale: {x: 0.00072809996, y: 0.00072809996, z: 0.00057755806}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,3 +86,51 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8865022068521137234
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406695326699825639}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7521261, y: 0.75212616, z: 2.5269108}
+  m_Center: {x: 0, y: 0, z: 0.0000019073486}
+--- !u!54 &1235405520511284202
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406695326699825639}
+  serializedVersion: 4
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
