@@ -3,6 +3,7 @@ using UnityEngine;
 
 using Oculus.Interaction.HandGrab;
 using System.Linq;
+using Oculus.Interaction;
 
 public class CheckGrab : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class CheckGrab : MonoBehaviour
     void Update()
     {
         var hand = _interactable.Interactors.FirstOrDefault<HandGrabInteractor>();
-        if (hand != null)
+        if (hand != null && _interactable.State == InteractableState.Select)
         {
             Debug.Log("Connected to hand " + hand.gameObject.tag);
 
