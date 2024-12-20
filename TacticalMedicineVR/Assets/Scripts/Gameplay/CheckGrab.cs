@@ -12,6 +12,12 @@ public class CheckGrab : MonoBehaviour
     [SerializeField]
     private GameObject backPackOpen;
 
+    [SerializeField]
+    private Collider colliderBackpackClosed;
+
+    [SerializeField]
+    private Collider colliderBackpackOpen;
+
     void Start()
     {
         _interactable = gameObject.GetComponent<HandGrabInteractable>();
@@ -27,8 +33,16 @@ public class CheckGrab : MonoBehaviour
 
             backPackClosed.SetActive(false);
             backPackOpen.SetActive(true);
+            switchCollider();
 
         }
 
+    }
+
+
+    void switchCollider() 
+    {
+        colliderBackpackClosed.enabled = false;
+        colliderBackpackOpen.enabled = true;
     }
 }
