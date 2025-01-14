@@ -4,13 +4,18 @@ using UMA.CharacterSystem;
 
 public class RemovePants : MonoBehaviour
 {
-    public DynamicCharacterAvatar avatar; // Reference to your UMA character
+    [SerializeField]
+    private DynamicCharacterAvatar avatar; // Reference to your UMA character
+    [SerializeField]
+    private bool clothesRemoved = false;
 
-    public bool removePantsAddUnderwear;
     // Wardrobe slot names
-    public string legsWardrobeSlot; // Wardrobe slot for pants
-    public string underwearRecipe = "UnderwearRecipe"; // The recipe name for underwear
-    public string shortsRecipe = "*[Legs] MaleShorts1  (HumanMale )";
+    [SerializeField]
+    private string legsWardrobeSlot; // Wardrobe slot for pants
+    [SerializeField]
+    private string underwearRecipe = "UnderwearRecipe"; // The recipe name for underwear
+    [SerializeField]
+    private string shortsRecipe = "*[Legs] MaleShorts1  (HumanMale )";
 
     void Start()
     {
@@ -25,15 +30,37 @@ public class RemovePants : MonoBehaviour
 
     private void Update()
     {
-        // Remove pants and add underwear
-        if (removePantsAddUnderwear)
+    
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("TRIGGER ENTER DETECTED");
+        if (other.gameObject.CompareTag("MedicalEquipment"))
         {
-            RemovePantsAndAddUnderwear();
-            removePantsAddUnderwear = false;
+            var medicalEquipment = other.gameObject.GetComponent<MedicalEquipment>();
+            if (medicalEquipment != null)
+            {
+                if (medicalEquipment.type == "Scissors")
+                {
+                    RemovePants1();
+                    medicalEquipment.audioSource.Play();
+                    clothesRemoved = true;
+
+                }
+                else if (medicalEquipment.type == "Tourniquet" && clothesRemoved)
+                {
+                  
+                }
+            }
+            else
+            {
+                Debug.Log("The triggered object is not a MedicalEquipment");
+            }
         }
     }
 
-    public void RemovePantsAndAddUnderwear()
+    public void RemovePants1()
     {
         if (string.IsNullOrEmpty(legsWardrobeSlot))
         {
