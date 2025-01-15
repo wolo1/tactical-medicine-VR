@@ -9,6 +9,9 @@ public class RemovePants : MonoBehaviour
     [SerializeField]
     private bool clothesRemoved = false;
 
+    [SerializeField]
+    private GameObject tourniquet;
+
     // Wardrobe slot names
     [SerializeField]
     private string legsWardrobeSlot; // Wardrobe slot for pants
@@ -60,6 +63,7 @@ public class RemovePants : MonoBehaviour
                 else if (medicalEquipment.type == "Tourniquet" && clothesRemoved)
                 {
                     Debug.Log("TRIGGER TOURNIQUET ENTER DETECTED");
+                    tourniquet.SetActive(true);
                 }
             }
             else
