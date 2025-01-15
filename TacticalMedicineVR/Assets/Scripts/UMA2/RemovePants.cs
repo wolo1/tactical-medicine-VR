@@ -17,6 +17,14 @@ public class RemovePants : MonoBehaviour
     [SerializeField]
     private string shortsRecipe = "*[Legs] MaleShorts1  (HumanMale )";
 
+
+    [SerializeField]
+    private Collider colliderScissors;
+
+    [SerializeField]
+    private Collider colliderTourniquet;
+
+
     void Start()
     {
         if (avatar == null)
@@ -46,11 +54,12 @@ public class RemovePants : MonoBehaviour
                     RemovePants1();
                     medicalEquipment.audioSource.Play();
                     clothesRemoved = true;
-
+                    colliderScissors.enabled = false;
+                    colliderTourniquet.enabled = true;
                 }
                 else if (medicalEquipment.type == "Tourniquet" && clothesRemoved)
                 {
-                  
+                    Debug.Log("TRIGGER TOURNIQUET ENTER DETECTED");
                 }
             }
             else
