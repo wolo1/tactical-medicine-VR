@@ -28,6 +28,9 @@ public class RemovePants : MonoBehaviour
     private Collider colliderTourniquet;
 
 
+    public GameObject blood;
+
+
     void Start()
     {
         if (avatar == null)
@@ -59,6 +62,7 @@ public class RemovePants : MonoBehaviour
                     clothesRemoved = true;
                     colliderScissors.enabled = false;
                     colliderTourniquet.enabled = true;
+                    blood.SetActive(true);
                 }
                 else if (medicalEquipment.type == "Tourniquet" && clothesRemoved)
                 {
