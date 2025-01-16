@@ -7,6 +7,9 @@ public class EnableTourniquet : MonoBehaviour
     [SerializeField]
     private GameObject tourniquet;
 
+    [SerializeField]
+    private Collider colliderBlanket;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,7 @@ public class EnableTourniquet : MonoBehaviour
                 {
                     Debug.Log("TRIGGER TOURNIQUET ENTER DETECTED");
                     tourniquet.SetActive(true);
+                    colliderBlanket.enabled = true;
                 }
             }
             else
