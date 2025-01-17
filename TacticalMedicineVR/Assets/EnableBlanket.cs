@@ -7,10 +7,16 @@ public class EnableBlanket : MonoBehaviour
     [SerializeField]
     private GameObject blanket;
 
+    [SerializeField]
+    private Animator animator;
+
+
+    public GameObject avatar;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = avatar.GetComponent<Animator>(); 
     }
 
     // Update is called once per frame
@@ -31,6 +37,7 @@ public class EnableBlanket : MonoBehaviour
                 {
                     Debug.Log("TRIGGER BLANKET ENTER DETECTED");
                     blanket.SetActive(true);
+                    animator.SetTrigger("LyingIdle");
                 }
             }
             else
