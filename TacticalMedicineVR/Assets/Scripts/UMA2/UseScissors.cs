@@ -2,7 +2,7 @@ using UnityEngine;
 using UMA;
 using UMA.CharacterSystem;
 
-public class RemovePants : MonoBehaviour
+public class UseScissors : MonoBehaviour
 {
     [SerializeField]
     private DynamicCharacterAvatar avatar; // Reference to your UMA character
@@ -15,10 +15,7 @@ public class RemovePants : MonoBehaviour
     // Wardrobe slot names
     [SerializeField]
     private string legsWardrobeSlot; // Wardrobe slot for pants
-    [SerializeField]
-    private string underwearRecipe = "UnderwearRecipe"; // The recipe name for underwear
-    [SerializeField]
-    private string shortsRecipe = "*[Legs] MaleShorts1  (HumanMale )";
+
 
 
     [SerializeField]
@@ -28,7 +25,13 @@ public class RemovePants : MonoBehaviour
     private Collider colliderTourniquet;
 
 
-    public GameObject blood;
+    [SerializeField]
+    private ParticleSystem arterialBleeding;
+
+
+    [SerializeField]
+    private GameObject bloodPuddle;
+
 
 
     void Start()
@@ -42,10 +45,16 @@ public class RemovePants : MonoBehaviour
         
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-    
+        if (clothesRemoved && bloodPuddle.transform.localScale.y >= 20)
+        {
+            bloodPuddle.GetComponent<Animator>().enabled = false;
+
+        }
+
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -57,18 +66,19 @@ public class RemovePants : MonoBehaviour
             {
                 if (medicalEquipment.type == "Scissors")
                 {
-                    RemovePants1();
+                    CutPants();
                     medicalEquipment.audioSource.Play();
                     clothesRemoved = true;
                     colliderScissors.enabled = false;
                     colliderTourniquet.enabled = true;
-                    blood.SetActive(true);
+                    //blood.SetActive(true);
+                    arterialBleeding.Play();
                 }
-                else if (medicalEquipment.type == "Tourniquet" && clothesRemoved)
+                /*else if (medicalEquipment.type == "Tourniquet" && clothesRemoved)
                 {
                     Debug.Log("TRIGGER TOURNIQUET ENTER DETECTED");
                     tourniquet.SetActive(true);
-                }
+                }*/
             }
             else
             {
@@ -77,7 +87,7 @@ public class RemovePants : MonoBehaviour
         }
     }
 
-    public void RemovePants1()
+    public void CutPants()
     {
         if (string.IsNullOrEmpty(legsWardrobeSlot))
         {
@@ -87,29 +97,9 @@ public class RemovePants : MonoBehaviour
 
         // Clear the Legs slot to remove pants
         avatar.ClearSlot(legsWardrobeSlot);
-
-
-        //avatar.SetSlot(shortsRecipe);
-
-        //avatar.SetSlot("Legs", "MaleShorts1");
+    
         avatar.BuildCharacter(); //important otherwise no changes will take place
         Debug.Log("Pants removed");
 
-
-
-        /* // Add the underwear back to the Legs slot
-         if (!string.IsNullOrEmpty(underwearRecipe))
-         {
-             avatar.SetSlot(legsWardrobeSlot, underwearRecipe);
-             Debug.Log("Underwear added back to the Legs slot.");
-         }
-         else
-         {
-             Debug.LogWarning("Underwear recipe not specified.");
-         }
-
-         // Rebuild the avatar to apply changes
-         avatar.BuildCharacter();
-         Debug.Log($"Pants removed and underwear added to the {legsWardrobeSlot} slot.");*/
     }
 }

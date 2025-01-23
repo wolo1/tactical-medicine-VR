@@ -33,7 +33,7 @@ public class EnableTourniquet : MonoBehaviour
                 if (medicalEquipment.type == "Tourniquet")
                 {
                     Debug.Log("TRIGGER TOURNIQUET ENTER DETECTED");
-                   // tourniquet.SetActive(true);
+                    tourniquet.SetActive(true);
                     colliderBlanket.enabled = true;
                 }
             }
