@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UMA;
+using UMA.CharacterSystem;
 
-public class EnableTourniquet : MonoBehaviour
+
+public class UseIsraeli : MonoBehaviour
 {
 
-
+    [SerializeField]
+    private DynamicCharacterAvatar avatar;
 
     [SerializeField]
-    private GameObject tourniquet;
+    private UMATextRecipe israeliRecipe;
 
-    [SerializeField]
-    private Collider colliderBlanket;
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +35,12 @@ public class EnableTourniquet : MonoBehaviour
             var medicalEquipment = other.gameObject.GetComponent<MedicalEquipment>();
             if (medicalEquipment != null)
             {
-                if (medicalEquipment.type == "Tourniquet")
+                if (medicalEquipment.type == "Israeli Bandage")
                 {
-                    Debug.Log("TRIGGER TOURNIQUET ENTER DETECTED");
-                    tourniquet.SetActive(true);
-                    colliderBlanket.enabled = true;
+                    Debug.Log("TRIGGER ISRAELI ENTER DETECTED");
+                    EquipTourniquet();
+                    //tourniquet.SetActive(true);
+                    //colliderBlanket.enabled = true;
                 }
             }
             else
@@ -47,4 +50,9 @@ public class EnableTourniquet : MonoBehaviour
         }
     }
 
+    public void EquipTourniquet()
+    {
+        avatar.SetSlot(israeliRecipe);
+        avatar.BuildCharacter();
+    }
 }
