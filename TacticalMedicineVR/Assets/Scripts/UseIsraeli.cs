@@ -14,18 +14,10 @@ public class UseIsraeli : MonoBehaviour
     [SerializeField]
     private UMATextRecipe israeliRecipe;
 
+    [SerializeField]
+    private Collider colliderBlanket;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -39,8 +31,7 @@ public class UseIsraeli : MonoBehaviour
                 {
                     Debug.Log("TRIGGER ISRAELI ENTER DETECTED");
                     EquipTourniquet();
-                    //tourniquet.SetActive(true);
-                    //colliderBlanket.enabled = true;
+                    colliderBlanket.enabled = true;
                 }
             }
             else
