@@ -15,7 +15,7 @@ public class UseIsraeli : MonoBehaviour
     private UMATextRecipe israeliRecipe;
 
     [SerializeField]
-    private Collider colliderBlanket;
+    private GameObject sphere;
 
 
 
@@ -31,7 +31,7 @@ public class UseIsraeli : MonoBehaviour
                 {
                     Debug.Log("TRIGGER ISRAELI ENTER DETECTED");
                     EquipTourniquet();
-                    colliderBlanket.enabled = true;
+                    sphere.SetActive(true);
                 }
             }
             else
