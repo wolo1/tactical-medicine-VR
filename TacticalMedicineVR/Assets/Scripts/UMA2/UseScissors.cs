@@ -73,12 +73,9 @@ public class UseScissors : MonoBehaviour
                     colliderTourniquet.enabled = true;
                     //blood.SetActive(true);
                     arterialBleeding.Play();
+                    medicalEquipment.applied = true;
                 }
-                /*else if (medicalEquipment.type == "Tourniquet" && clothesRemoved)
-                {
-                    Debug.Log("TRIGGER TOURNIQUET ENTER DETECTED");
-                    tourniquet.SetActive(true);
-                }*/
+                
             }
             else
             {

@@ -7,5 +7,7 @@ public class MedicalEquipment : MonoBehaviour
     public string type; // Assign this in the inspector for each medical object
 
     public AudioSource audioSource;
+
+    public bool applied = false;
                          
 }

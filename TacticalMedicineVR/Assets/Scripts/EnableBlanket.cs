@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UMA;
+using UMA.CharacterSystem;
 
 public class EnableBlanket : MonoBehaviour
 {
     [SerializeField]
     private GameObject blanket;
 
+    [SerializeField]
+    private UMATextRecipe blanketRecipe;
 
+
+    [SerializeField]
+    private DynamicCharacterAvatar avatar;
 
     // Start is called before the first frame update
 
@@ -30,6 +37,7 @@ public class EnableBlanket : MonoBehaviour
                 {
                     Debug.Log("TRIGGER BLANKET ENTER DETECTED");
                     blanket.SetActive(true);
+
                 }
             }
             else
@@ -37,5 +45,11 @@ public class EnableBlanket : MonoBehaviour
                 Debug.Log("The triggered object is not a MedicalEquipment");
             }
         }
+    }
+
+    public void EquipBlanket()
+    {
+        avatar.SetSlot(blanketRecipe);
+        avatar.BuildCharacter();
     }
 }

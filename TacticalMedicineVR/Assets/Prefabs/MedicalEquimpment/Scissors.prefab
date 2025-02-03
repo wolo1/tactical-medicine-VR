@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.137, z: 0.187}
-  m_LocalScale: {x: 0.000143073, y: 0.00014307302, z: 0.00014307302}
+  m_LocalScale: {x: 0.080761, y: 0.080761, z: 0.080761}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6863125070873823246}
@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: Scissors
   audioSource: {fileID: 5720587458476315705}
+  applied: 0
 --- !u!82 &5720587458476315705
 AudioSource:
   m_ObjectHideFlags: 0
@@ -140,7 +141,8 @@ AudioSource:
   m_GameObject: {fileID: 1256119405472108178}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8200371721765368307, guid: d02ac5eaff4260642aab6aa985c76fc1,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: ee8e1d1fbf8661c47a24412e60a76f6d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

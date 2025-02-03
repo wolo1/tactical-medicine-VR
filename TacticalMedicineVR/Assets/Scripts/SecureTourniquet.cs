@@ -25,7 +25,7 @@ public class SecureTourniquet : MonoBehaviour
     private GameObject tourniquet;
 
     [SerializeField]
-    private float scaleStep = 0.1f;
+    private float scaleStep = 0.05f;
 
     private float previousWindlassRotationZ;
     private float totalRotationZ;
@@ -92,5 +92,6 @@ public class SecureTourniquet : MonoBehaviour
         avatar.SetSlot(tourniquetRecipe);
         avatar.BuildCharacter();
         tourniquet.SetActive(false);
+        colliderIsraeli.enabled =true;
     }
 }
