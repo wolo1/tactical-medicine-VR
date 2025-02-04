@@ -32,6 +32,7 @@ public class UseIsraeli : MonoBehaviour
                     Debug.Log("TRIGGER ISRAELI ENTER DETECTED");
                     EquipTourniquet();
                     sphere.SetActive(true);
+                    medicalEquipment.applied = true;
                 }
             }
             else
