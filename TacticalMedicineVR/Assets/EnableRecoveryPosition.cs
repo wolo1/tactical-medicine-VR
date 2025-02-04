@@ -38,7 +38,8 @@ public class EnableRecoveryPosition : MonoBehaviour
 
     void startAnimation()
     {
-        animator.SetTrigger("Recovery Position");
+        animator.CrossFade("Recovery Position", 0.1f);
+        //animator.SetTrigger("Recovery Position");
         animationStarted = true;
     }
 }

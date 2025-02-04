@@ -16,14 +16,10 @@ public class EnableBlanket : MonoBehaviour
     [SerializeField]
     private DynamicCharacterAvatar avatar;
 
-    // Start is called before the first frame update
+    
 
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+ 
 
     private void OnTriggerEnter(Collider other)
     {
@@ -37,6 +33,8 @@ public class EnableBlanket : MonoBehaviour
                 {
                     Debug.Log("TRIGGER BLANKET ENTER DETECTED");
                     blanket.SetActive(true);
+                    EquipBlanket();
+                    medicalEquipment.applied = true;
 
                 }
             }

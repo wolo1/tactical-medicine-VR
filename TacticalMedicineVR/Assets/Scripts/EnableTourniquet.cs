@@ -21,6 +21,7 @@ public class EnableTourniquet : MonoBehaviour
                 {
                     Debug.Log("TRIGGER TOURNIQUET ENTER DETECTED");
                     tourniquet.SetActive(true);
+                    medicalEquipment.applied = true;
                 }
             }
             else
