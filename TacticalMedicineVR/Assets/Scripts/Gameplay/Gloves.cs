@@ -36,7 +36,8 @@ public class Gloves : MonoBehaviour
 
             l_handMeshNode.GetComponent<Renderer>().material = latex;
             r_handMeshNode.GetComponent<Renderer>().material = latex;
-
+            gameObject.GetComponentInParent<MedicalEquipment>().applied = true;
+            gameObject.GetComponentInParent<MedicalEquipment>().audioSource.Play();
             }
 
         }
