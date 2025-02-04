@@ -2950,7 +2950,7 @@ MonoBehaviour:
       deleteThis: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
   animator: {fileID: 0}
-  KeepAvatar: 0
+  KeepAvatar: 1
   characterHeight: 2
   characterRadius: 0.25
   characterMass: 50
@@ -2996,8 +2996,8 @@ MonoBehaviour:
       m_Calls: []
   DelayUnload: 2
   BundleCheck: 1
-  KeepAnimatorController: 0
-  RecreateAnimatorOnRaceChange: 1
+  KeepAnimatorController: 1
+  RecreateAnimatorOnRaceChange: 0
   userInformation: 
   RecipeUpdated:
     m_PersistentCalls:
@@ -3029,7 +3029,7 @@ MonoBehaviour:
   loadBlendshapeTangents: 1
   loadAllFrames: 1
   forceKeepBlendshapes: []
-  keepAvatar: 0
+  keepAvatar: 1
   rawAvatar: 0
   keepPredefinedDNA: 0
   activeRace:
@@ -3439,8 +3439,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149868618}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 8f2ce3a5a5d27e74787f3b14863ec702, type: 2}
+  m_Controller: {fileID: 9100000, guid: a7763b4006f11e44ea129e5e7bb433f6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
