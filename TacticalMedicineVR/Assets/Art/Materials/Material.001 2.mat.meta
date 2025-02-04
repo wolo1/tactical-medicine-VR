@@ -1,10 +1,8 @@
 fileFormatVersion: 2
-guid: ce77473f8882b844294d443c6de575b2
-labels:
-- UMA_Overlay
+guid: 33b615f958c0cf8488136f41bdc6f668
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 0
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
