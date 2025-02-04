@@ -1,10 +1,8 @@
 fileFormatVersion: 2
-guid: 17ddd214abbfbfa47b9154df82cee750
-labels:
-- UMA_Animator Controller
+guid: 684cac2ae90ed874aa9bdd3f24b585af
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 0
+  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
