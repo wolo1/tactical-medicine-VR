@@ -41,5 +41,7 @@ public class EnableRecoveryPosition : MonoBehaviour
         animator.CrossFade("Recovery Position", 0.1f);
         //animator.SetTrigger("Recovery Position");
         animationStarted = true;
+
+        gameObject.SetActive(false);
     }
 }

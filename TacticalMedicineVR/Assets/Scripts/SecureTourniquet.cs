@@ -75,6 +75,7 @@ public class SecureTourniquet : MonoBehaviour
         {
             colliderIsraeli.enabled = true;
             EquipTourniquet();
+            AdjustParticleEffect();
         }
 
         // Update the previous rotation to the current one every frame
