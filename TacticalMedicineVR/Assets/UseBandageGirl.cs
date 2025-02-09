@@ -11,6 +11,9 @@ public class UseBandageGirl : MonoBehaviour
 
     [SerializeField]
     private UMATextRecipe bandageRecipe;
+    
+    [SerializeField]
+    private UMATextRecipe israeliBandageRecipe;
 
  
 
@@ -27,7 +30,14 @@ public class UseBandageGirl : MonoBehaviour
                 if (medicalEquipment.type == "Bandage")
                 {
                     Debug.Log("TRIGGER BANDAGE ENTER DETECTED");
-                    Equip();
+                    EquipBandage();
+                    medicalEquipment.applied = true;
+                }
+
+                else if (medicalEquipment.type == "Israeli Bandage")
+                {
+                    Debug.Log("TRIGGER BANDAGE ENTER DETECTED");
+                    EquipIsraeli();
                     medicalEquipment.applied = true;
                 }
             }
@@ -38,9 +48,15 @@ public class UseBandageGirl : MonoBehaviour
         }
     }
 
-    public void Equip()
+    public void EquipBandage()
     {
         avatar.SetSlot(bandageRecipe);
+        avatar.BuildCharacter();
+    }  
+    
+    public void EquipIsraeli()
+    {
+        avatar.SetSlot(israeliBandageRecipe);
         avatar.BuildCharacter();
     }
 }
