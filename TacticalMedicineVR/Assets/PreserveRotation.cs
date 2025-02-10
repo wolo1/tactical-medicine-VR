@@ -11,6 +11,9 @@ public class PreserveRotation : MonoBehaviour
     private float elapsedTime = 0f;
     private bool isTransitioning = false;
 
+    [SerializeField]
+    private float rotationAdd = 100f;
+
     void Start()
     {
         animator = GetComponent<Animator>(); // Automatically get the Animator
@@ -20,14 +23,18 @@ public class PreserveRotation : MonoBehaviour
 
     void LateUpdate()
     {
-        animator = GetComponent<Animator>(); // Automatically get the Animator
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>(); // Automatically get the Animator
+        }
 
-        if (animator && animator.GetCurrentAnimatorStateInfo(0).IsName("Take 001 Custom"))
+
+        if (animator && animator.GetCurrentAnimatorStateInfo(0).IsName("Recovery Position"))
         {
             Debug.Log("TAKE DETECTED");
 
             // Set the target rotation with +50 degrees on the Y-axis
-            targetRotation = Quaternion.Euler(initialRotation.eulerAngles.x, initialRotation.eulerAngles.y + 50, initialRotation.eulerAngles.z);
+            targetRotation = Quaternion.Euler(initialRotation.eulerAngles.x, initialRotation.eulerAngles.y + rotationAdd, initialRotation.eulerAngles.z);
         }
         else
         {

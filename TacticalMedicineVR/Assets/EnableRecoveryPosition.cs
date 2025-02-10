@@ -29,7 +29,7 @@ public class EnableRecoveryPosition : MonoBehaviour
     private void LateUpdate()
     {
         // Check if the distance from the initial position is at least 10 cm in any direction
-        if (!animationStarted && (Vector3.Distance(transform.position, initialPosition) >= 0.1f))
+        if (!animationStarted && (Vector3.Distance(transform.position, initialPosition) >= 0.3f))
         {
             startAnimation();
             blanket.SetActive(true);
@@ -38,6 +38,11 @@ public class EnableRecoveryPosition : MonoBehaviour
 
     void startAnimation()
     {
+        if (animator == null)
+        {
+            animator = avatar.GetComponent<Animator>();
+        }
+
         animator.CrossFade("Recovery Position", 0.1f);
         //animator.SetTrigger("Recovery Position");
         animationStarted = true;
