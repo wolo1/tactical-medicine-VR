@@ -61,5 +61,6 @@ public class NPCMover : MonoBehaviour
         }
 
         isMoving = false;
+        animator.SetTrigger("Guarding");
     }
 }
