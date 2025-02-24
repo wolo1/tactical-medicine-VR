@@ -11,7 +11,11 @@ public class BloodHands : MonoBehaviour
     public GameObject r_handMeshNode;
     [SerializeField]
 
-    private Material latexBlood;
+    private Material latexBloodLeft;
+    [SerializeField]
+
+
+    private Material latexBloodRight;
     [SerializeField]
 
     // Start is called before the first frame update
@@ -20,23 +24,12 @@ public class BloodHands : MonoBehaviour
         ChangeTextureHands();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-       
-    }
-
 
     public void ChangeTextureHands()
     {
 
-        l_handMeshNode.GetComponent<Renderer>().material = latexBlood;
-        r_handMeshNode.GetComponent<Renderer>().material = latexBlood;
+        l_handMeshNode.GetComponent<Renderer>().material = latexBloodLeft;
+        r_handMeshNode.GetComponent<Renderer>().material = latexBloodRight;
     }
 
 }
