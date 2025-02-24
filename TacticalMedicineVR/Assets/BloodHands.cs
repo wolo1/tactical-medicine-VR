@@ -21,7 +21,7 @@ public class BloodHands : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ChangeTextureHands();
+        //ChangeTextureHands();
     }
 
 

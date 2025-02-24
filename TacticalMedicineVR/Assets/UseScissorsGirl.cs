@@ -31,6 +31,8 @@ public class UseScissorsGirl : MonoBehaviour
     [SerializeField]
     private GameObject bloodPuddle;
 
+    private BloodHands bloodHands;
+
 
 
     void Start()
@@ -41,7 +43,7 @@ public class UseScissorsGirl : MonoBehaviour
             return;
         }
 
-
+        bloodHands = GetComponent<BloodHands>();
     }
 
     private void LateUpdate()
@@ -73,6 +75,7 @@ public class UseScissorsGirl : MonoBehaviour
                     //blood.SetActive(true);
                     //bleeding.Play();
                     medicalEquipment.applied = true;
+                    bloodHands.ChangeTextureHands();
                 }
 
             }
