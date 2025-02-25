@@ -6,20 +6,21 @@ using UMA.CharacterSystem;
 
 public class UseTourniquet : MonoBehaviour
 {
-    [SerializeField]
-    private DynamicCharacterAvatar avatar;
+    [SerializeField] private DynamicCharacterAvatar avatar;
+    [SerializeField] private UMATextRecipe tourniquetUma;
+    [SerializeField] private GameObject sphere;
+    [SerializeField] private GameObject windglass; // Ensure this is assigned in the Inspector
+    [SerializeField] private GameObject tourniquetGameObject;
 
     [SerializeField]
-    private UMATextRecipe tourniquet;
+    private GameObject bloodPuddle;
 
-    [SerializeField]
-    private GameObject sphere;
-
+    private bool tourniquetApplied = false;
 
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("TRIGGER ENTER DETECTED");
-        if (other.gameObject.CompareTag("MedicalEquipment"))
+        if (other.gameObject.CompareTag("MedicalEquipment") && tourniquetApplied == false)
         {
             var medicalEquipment = other.gameObject.GetComponent<MedicalEquipment>();
             if (medicalEquipment != null)
@@ -27,9 +28,10 @@ public class UseTourniquet : MonoBehaviour
                 if (medicalEquipment.type == "Tourniquet")
                 {
                     Debug.Log("TRIGGER Tourniquet ENTER DETECTED");
-                    EquipTourniquet();
+                    Tourniquet();
                     sphere.SetActive(true);
                     medicalEquipment.applied = true;
+                    medicalEquipment.audioSource.Play();
                 }
             }
             else
@@ -39,9 +41,50 @@ public class UseTourniquet : MonoBehaviour
         }
     }
 
+    void Tourniquet()
+    {
+        // Activate the tourniquet
+        tourniquetGameObject.SetActive(true);
+
+        // Start rotating the windlass
+        StartCoroutine(RotateWindlass());
+
+        // Equip tourniquet to the avatar
+        EquipTourniquet();
+    }
+
     public void EquipTourniquet()
     {
-        avatar.SetSlot(tourniquet);
+        avatar.SetSlot(tourniquetUma);
         avatar.BuildCharacter();
+
+        tourniquetApplied = true;
+        bloodPuddle.GetComponent<Animator>().enabled = false;
+    }
+
+    IEnumerator RotateWindlass()
+    {
+        float duration = 2f; // Time to complete 2 full rotations (1 second)
+        float rotationSpeed = 360f; // Degrees per second (360 * 2)
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            float rotationAmount = rotationSpeed * Time.deltaTime;
+            windglass.transform.Rotate(0, rotationAmount, 0);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Ensure it stops at exactly 720 degrees (2 full turns)
+        windglass.transform.rotation = Quaternion.Euler(
+            windglass.transform.rotation.eulerAngles.x,
+            windglass.transform.rotation.eulerAngles.y + 720f,
+            windglass.transform.rotation.eulerAngles.z
+        );
+
+        EquipTourniquet();
+        tourniquetGameObject.SetActive(false);
+
     }
 }
