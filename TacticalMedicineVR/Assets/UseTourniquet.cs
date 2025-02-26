@@ -11,6 +11,7 @@ public class UseTourniquet : MonoBehaviour
     [SerializeField] private GameObject sphere;
     [SerializeField] private GameObject windglass; // Ensure this is assigned in the Inspector
     [SerializeField] private GameObject tourniquetGameObject;
+    [SerializeField] private ParticleSystem bloodStream;
 
     [SerializeField]
     private GameObject bloodPuddle;
@@ -60,6 +61,7 @@ public class UseTourniquet : MonoBehaviour
 
         tourniquetApplied = true;
         bloodPuddle.GetComponent<Animator>().enabled = false;
+        bloodStream.Stop();
     }
 
     IEnumerator RotateWindlass()
