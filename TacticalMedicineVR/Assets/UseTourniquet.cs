@@ -16,12 +16,12 @@ public class UseTourniquet : MonoBehaviour
     [SerializeField]
     private GameObject bloodPuddle;
 
-    private bool tourniquetApplied = false;
+    public bool TourniquetJeansApplied { get; private set; } = false;
 
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("TRIGGER ENTER DETECTED");
-        if (other.gameObject.CompareTag("MedicalEquipment") && tourniquetApplied == false)
+        if (other.gameObject.CompareTag("MedicalEquipment") && TourniquetJeansApplied == false)
         {
             var medicalEquipment = other.gameObject.GetComponent<MedicalEquipment>();
             if (medicalEquipment != null)
@@ -59,7 +59,7 @@ public class UseTourniquet : MonoBehaviour
         avatar.SetSlot(tourniquetUma);
         avatar.BuildCharacter();
 
-        tourniquetApplied = true;
+        TourniquetJeansApplied = true;
         bloodPuddle.GetComponent<Animator>().enabled = false;
         bloodStream.Stop();
     }

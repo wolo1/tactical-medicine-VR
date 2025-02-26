@@ -20,7 +20,6 @@ public class NPCController : MonoBehaviour
         // Check if the audio is playing
         if (audioSource != null && !audioSource.isPlaying)
         {
-            Debug.Log("Audio is not playing!");
             npcMover.enabled = true;
             animator.SetTrigger("Walking");
         }

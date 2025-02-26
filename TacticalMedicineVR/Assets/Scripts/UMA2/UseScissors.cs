@@ -24,6 +24,9 @@ public class UseScissors : MonoBehaviour
     [SerializeField]
     private Collider colliderTourniquet;
 
+    [SerializeField]
+    private Collider colliderIsraeli;
+
 
     [SerializeField]
     private ParticleSystem arterialBleeding;
@@ -34,7 +37,14 @@ public class UseScissors : MonoBehaviour
 
     private BloodHands bloodHands;
 
+    [SerializeField]
+    private GameObject useTourniquetOverJeans;
 
+    [SerializeField]
+    private bool tourniquetJeansApplied;
+
+    [SerializeField] 
+    private UMATextRecipe tourniquetUma;
 
     void Start()
     {
@@ -45,6 +55,8 @@ public class UseScissors : MonoBehaviour
         }
 
         bloodHands = GetComponent<BloodHands>();
+
+        
     }
 
     private void LateUpdate()
@@ -68,15 +80,27 @@ public class UseScissors : MonoBehaviour
             {
                 if (medicalEquipment.type == "Scissors")
                 {
+                    tourniquetJeansApplied = useTourniquetOverJeans.GetComponent<UseTourniquet>().TourniquetJeansApplied;
+
                     CutPants();
                     medicalEquipment.audioSource.Play();
                     clothesRemoved = true;
                     colliderScissors.enabled = false;
-                    colliderTourniquet.enabled = true;
+
+                    if (tourniquetJeansApplied == true)
+                    {
+                        colliderIsraeli.enabled = true;
+                        ReplaceTourniquet();
+                    }
+                    else
+                    {
+                        colliderTourniquet.enabled = true;
+                    }    
+                    
                     //blood.SetActive(true);
-                    arterialBleeding.Play();
                     medicalEquipment.applied = true;
                     bloodHands.ChangeTextureHands();
+                    useTourniquetOverJeans.SetActive(false);
                 }
                 
             }
@@ -101,5 +125,14 @@ public class UseScissors : MonoBehaviour
         avatar.BuildCharacter(); //important otherwise no changes will take place
         Debug.Log("Pants removed");
 
+    }
+
+
+
+    void ReplaceTourniquet()
+    {
+        avatar.ClearSlot("Arms");
+        avatar.SetSlot(tourniquetUma);
+        avatar.BuildCharacter();
     }
 }
