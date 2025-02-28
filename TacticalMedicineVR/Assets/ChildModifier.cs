@@ -19,6 +19,7 @@ public class ChildModifier : MonoBehaviour
 
         // Ensure the DNA is properly loaded
         avatar.CharacterCreated.AddListener(OnCharacterCreated);
+
     }
 
     private void OnCharacterCreated(UMAData data)
