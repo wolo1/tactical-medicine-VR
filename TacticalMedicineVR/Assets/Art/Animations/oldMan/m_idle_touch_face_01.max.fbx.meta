@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa8b5d6f4f21f1c48bd9afbb43c0db05
+guid: beffcd9c3b359484a91d7ce284199120
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -27,7 +27,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -40,7 +40,7 @@ ModelImporter:
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 0
-      lastFrame: 323.31
+      lastFrame: 179
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
