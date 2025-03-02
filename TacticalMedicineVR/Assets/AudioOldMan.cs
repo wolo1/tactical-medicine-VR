@@ -6,6 +6,7 @@ public class AudioOldMan : MonoBehaviour
     [SerializeField]
     private AudioSource audioSourceOldMan;
 
+    [Header("Old Man")]
     [SerializeField]
     private AudioClip audioOldMan1;
 
@@ -15,8 +16,10 @@ public class AudioOldMan : MonoBehaviour
     [SerializeField]
     private AudioClip audioOldMan3;
 
+    
+
     [SerializeField]
-    private bool talkRare = false; 
+    public bool talkRare = false; 
     private void Start()
     {
         audioSourceOldMan = GetComponent<AudioSource>();
