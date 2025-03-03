@@ -9,6 +9,7 @@ TagManager:
   - UMAIgnore
   - HandLeft
   - PatientInstruction
+  - Hand
   layers:
   - Default
   - TransparentFX
