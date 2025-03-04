@@ -48,6 +48,8 @@ public class ApplyInstructions : MonoBehaviour
             }
             DestroyAllInstructions();
             gameObject.GetComponent<AudioOldMan>().enabled = false;
+            GetComponent<AudioSource>().enabled = false;
+
         }
     }
 
