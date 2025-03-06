@@ -42,9 +42,9 @@ public class EnableRecoveryPosition : MonoBehaviour
         {
             animator = avatar.GetComponent<Animator>();
         }
-
-        animator.CrossFade("Recovery Position", 0.1f);
-        //animator.SetTrigger("Recovery Position");
+        Debug.Log("Starting animation");
+        //animator.CrossFade("Recovery Position", 0.1f);
+        animator.SetTrigger("Recovery Position");
         animationStarted = true;
 
         gameObject.SetActive(false);

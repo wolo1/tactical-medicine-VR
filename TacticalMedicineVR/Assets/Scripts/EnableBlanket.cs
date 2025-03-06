@@ -33,7 +33,8 @@ public class EnableBlanket : MonoBehaviour
                 {
                     Debug.Log("TRIGGER BLANKET ENTER DETECTED");
                     blanket.SetActive(true);
-                    EquipBlanket();
+                    if (blanketRecipe != null)
+                                    EquipBlanket();
                     medicalEquipment.applied = true;
 
                 }

@@ -39,7 +39,7 @@ public class HandSwingMovement : MonoBehaviour
     void Update()
     {
         // Recheck hands in case they get reassigned or deleted
-        if (leftHand == null || rightHand == null)
+        /*if (leftHand == null || rightHand == null)
         {
            FindHandsRecursively(transform);
 
@@ -52,6 +52,7 @@ public class HandSwingMovement : MonoBehaviour
                 return;
             }
         }
+        */
 
         // Get current hand positions
         Vector3 currentLeftHandPosition = GetHandPosition(leftHandGameObject);
