@@ -16,6 +16,8 @@ public class UseBandageChild : MonoBehaviour
     private UMATextRecipe israeliBandageRecipe;
 
 
+    [SerializeField]
+    private GameObject Instructions;
 
 
 
@@ -52,11 +54,15 @@ public class UseBandageChild : MonoBehaviour
     {
         avatar.SetSlot(bandageRecipe);
         avatar.BuildCharacter();
+        Instructions.SetActive(true);
+
     }
 
     public void EquipIsraeli()
     {
         avatar.SetSlot(israeliBandageRecipe);
         avatar.BuildCharacter();
+        Instructions.SetActive(true);
+
     }
 }

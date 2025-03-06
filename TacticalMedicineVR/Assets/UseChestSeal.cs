@@ -13,8 +13,9 @@ public class UseChestSeal : MonoBehaviour
     [SerializeField]
     private UMATextRecipe chestSealOverlay;
 
-  
 
+    [SerializeField]
+    private GameObject Instructions;
 
 
     [SerializeField]
@@ -76,5 +77,7 @@ public class UseChestSeal : MonoBehaviour
     {
         avatar.SetSlot(chestSealOverlay);
         avatar.BuildCharacter();
+
+        Instructions.SetActive(true);
     }
 }
