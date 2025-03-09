@@ -23,7 +23,6 @@ public class EnableBlanket : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("TRIGGER ENTER DETECTED ENABLEBLANKET");
         if (other.gameObject.CompareTag("MedicalEquipment"))
         {
             var medicalEquipment = other.gameObject.GetComponent<MedicalEquipment>();

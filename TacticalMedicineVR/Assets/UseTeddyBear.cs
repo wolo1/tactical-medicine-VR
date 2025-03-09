@@ -14,7 +14,7 @@ public class UseTeddyBear : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("TRIGGER ENTER DETECTED");
+        
         if (other.gameObject.CompareTag("MedicalEquipment"))
         {
             var medicalEquipment = other.gameObject.GetComponent<MedicalEquipment>();
