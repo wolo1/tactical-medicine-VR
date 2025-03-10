@@ -35,12 +35,12 @@ public class UseNasofarengia : MonoBehaviour
                 if (medicalEquipment.type == "Nasofarengia")
                 {
                     Debug.Log("TRIGGER NASOFARENGIA ENTER DETECTED");
+                    medicalEquipment.applied = true;
 
                     // Start Coroutine to delay execution
                     StartCoroutine(DelayedEffects());
 
                     EquipNasofarengia();
-                    medicalEquipment.applied = true;
                 }
             }
             else
