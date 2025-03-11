@@ -16,6 +16,9 @@ public class AudioOldMan : MonoBehaviour
     [SerializeField]
     private AudioClip audioOldMan3;
 
+    [SerializeField]
+    private GameObject instructions;
+
     
 
     [SerializeField]
@@ -29,6 +32,8 @@ public class AudioOldMan : MonoBehaviour
     private IEnumerator PlayRandomAudio()
     {
         yield return new WaitForSeconds(40f); // Wait 40 seconds before first play
+
+        instructions.SetActive(true);
 
         while (true)
         {
