@@ -51,7 +51,7 @@ public class ReturnAllObjectsAfterApplied : MonoBehaviour
         }
 
         // Wait for 1 second before setting applied back to false
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(1.0f);
 
         // Re-enable the HandGrabInteraction child object
         if (handGrabChild != null)
