@@ -8,6 +8,6 @@ public class StartGame : MonoBehaviour
 {
     public void StartMainScene()
     {
-        SceneManager.LoadScene(0); // Loads the first scene in Build Settings
+        SceneManager.LoadScene(1); // Loads the first scene in Build Settings
     }
 }
